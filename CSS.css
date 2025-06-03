@@ -9,7 +9,7 @@
   src: url('./fonts/noto-sans-sc-v11-latin_chinese-simplified-regular.woff2') format('woff2');
 }
 
-/* Tooltip (pas de changements demandés ici) */
+/* Tooltip */
 #tooltip {
   position: absolute;
   width: auto;
@@ -30,9 +30,9 @@
 
 /* Table principale */
 .reportTable {
-  font-family: Open Sans, Helvetica, Arial, Noto Sans TC, Noto Sans SC, sans-serif; /* Styles Looker par défaut */
-  font-weight: bold; /* Texte en gras */
-  color: white; /* Texte blanc par défaut */
+  font-family: Open Sans, Helvetica, Arial, Noto Sans TC, Noto Sans SC, sans-serif;
+  font-weight: bold;
+  color: white;
   border-collapse: collapse;
   border-spacing: 0;
   table-layout: fixed;
@@ -40,30 +40,39 @@
 
 /* En-têtes de la table */
 th.headerCell {
-  background-color: black; /* Fond noir */
-  color: white; /* Texte blanc */
-  padding: 10px; /* Espacement intérieur */
-  border-bottom: 1px solid #444; /* Ligne de séparation grise pour les en-têtes */
-  font-weight: bold; /* Texte en gras */
-  text-align: left; /* Alignement du texte à gauche */
+  background-color: black;
+  color: white;
+  padding: 10px;
+  border-bottom: 1px solid #444;
+  font-weight: bold;
+  text-align: left;
+  font-size: 30px; /* Taille de police pour tous les en-têtes */
 }
 
 /* Corps de la table (lignes et cellules) */
 .rowCell {
-  background-color: black; /* Fond noir pour chaque cellule */
-  color: white; /* Texte blanc */
-  padding: 10px; /* Espacement intérieur */
-  border-bottom: 1px solid #444; /* Ligne de séparation grise subtile */
-  font-weight: bold; /* Texte en gras */
-  text-align: right; /* Alignement numérique par défaut */
+  background-color: black;
+  color: white;
+  padding: 10px;
+  border-bottom: 1px solid #444;
+  font-weight: bold;
+  text-align: right;
+  font-size: 30px; /* Taille de police par défaut pour toutes les cellules */
+}
+
+/* Première colonne ("GAMME") */
+.rowCell:first-child {
+  font-size: 20px; /* Taille de police pour la première colonne */
+  text-align: left; /* Alignement à gauche pour la première colonne */
 }
 
 /* Cellules fusionnées (Merged) */
 .rowCell.merged {
-  background-color: black !important; /* Fond noir également pour les cellules fusionnées */
+  background-color: black !important;
+  font-size: 30px; /* Taille de police pour les cellules fusionnées */
 }
 
-/* Style pour les totaux (optionnel) */
+/* Style pour les totaux */
 .total {
   background: black;
   border-top: 2px solid white;
@@ -72,14 +81,14 @@ th.headerCell {
 
 /* Ligne survolée (optionnel) */
 .rowCell:hover {
-  background-color: #222; /* Légère différence de ton pour la ligne survolée */
+  background-color: #222;
 }
 
 /* Alignement des chiffres et des données non numériques */
 .nonNumeric {
-  text-align: left; /* Aligne le texte non-numérique à gauche */
+  text-align: left;
 }
 
 .numeric {
-  text-align: right; /* Aligne les valeurs numériques à droite */
+  text-align: right;
 }
