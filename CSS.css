@@ -1,33 +1,3 @@
-/* Fontes existantes */
-@font-face {
-  font-family: 'Noto Sans TC';
-  src: url('./fonts/noto-sans-tc-v10-latin_chinese-traditional-regular.woff2') format('woff2');
-}
-
-@font-face {
-  font-family: 'Noto Sans SC';
-  src: url('./fonts/noto-sans-sc-v11-latin_chinese-simplified-regular.woff2') format('woff2');
-}
-
-/* Tooltip (pas de changements demandés ici) */
-#tooltip {
-  position: absolute;
-  width: auto;
-  height: auto;
-  padding: 5px;
-  background-color: white;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
-  -webkit-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
-  -moz-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
-  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
-  pointer-events: none;
-  font-family: sans-serif;
-  font-size: 12px;
-  z-index: 2;
-}
-
 /* Table principale */
 .reportTable {
   font-family: Open Sans, Helvetica, Arial, Noto Sans TC, Noto Sans SC, sans-serif; /* Styles Looker par défaut */
@@ -46,6 +16,7 @@ th.headerCell {
   border-bottom: 1px solid #444; /* Ligne de séparation grise pour les en-têtes */
   font-weight: bold; /* Texte en gras */
   text-align: left; /* Alignement du texte à gauche */
+  font-size: 30px; /* Toutes les en-têtes sont en taille 30 */
 }
 
 /* Corps de la table (lignes et cellules) */
@@ -56,11 +27,19 @@ th.headerCell {
   border-bottom: 1px solid #444; /* Ligne de séparation grise subtile */
   font-weight: bold; /* Texte en gras */
   text-align: right; /* Alignement numérique par défaut */
+  font-size: 30px; /* Taille par défaut pour les cellules du corps (30px) */
+}
+
+/* Colonne "GAMME" (première colonne) */
+td:first-child {
+  font-size: 20px; /* Taille spécifique pour la colonne tout à gauche (GAMME) */
+  text-align: left; /* Alignement du texte à gauche pour "GAMME" */
 }
 
 /* Cellules fusionnées (Merged) */
 .rowCell.merged {
   background-color: black !important; /* Fond noir également pour les cellules fusionnées */
+  font-size: 30px; /* Taille par défaut pour les cellules fusionnées */
 }
 
 /* Style pour les totaux (optionnel) */
@@ -81,5 +60,3 @@ th.headerCell {
 }
 
 .numeric {
-  text-align: right; /* Aligne les valeurs numériques à droite */
-}
