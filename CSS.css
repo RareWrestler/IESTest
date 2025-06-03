@@ -62,7 +62,7 @@ th.headerCell {
 
 /* Première colonne ("GAMME") */
 .reportTable tr td:first-child {
-  font-size: 20px; /* Taille de police pour la première colonne */
+  font-size: 5px; /* Taille de police pour la première colonne */
   text-align: left; /* Alignement à gauche pour la première colonne */
 }
 
